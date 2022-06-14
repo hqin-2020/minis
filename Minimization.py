@@ -135,7 +135,7 @@ def  minimization(obs):
         try:
             μ0, Σ0, Ass, Σs = init_kf(start)
             n_trials +=1
-            if (np.all(np.linalg.eigvals(Σ0)>=0)) & (np.all(abs(np.linalg.eigvals(Ass))<1) & (np.all(np.linalg.eigvals(Σs)>=0))):
+            if (np.all(np.linalg.eigvals(Σ0)>=0)) & (np.all(abs(np.linalg.eigvals(Ass))<1)) & ((np.all(np.linalg.eigvals(Σs)>=0))):
                 stable = True
             else:
                 stable = False
